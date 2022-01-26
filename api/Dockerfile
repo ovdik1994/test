@@ -1,12 +1,10 @@
 FROM node:14-alpine
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-COPY package*.json /app
+COPY . /usr/src/app
 
 RUN npm install
-
-COPY . /app
 
 ENV PORT 4000
 
