@@ -5,6 +5,7 @@ services:
   api:
     build: ./api
     container_name: api
+    restart: always
     environment:
       PORT: 4000
     ports:
@@ -15,6 +16,7 @@ services:
   front:
     build: ./front
     container_name: front
+    restart: always
     ports:
       - 3000:3000
     networks:
