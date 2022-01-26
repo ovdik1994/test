@@ -31,6 +31,9 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
     networks:
       - test_net
+    depends_on:
+      - api
+      - front
 
 networks:
   test_net:
