@@ -31,6 +31,7 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
       - ./nginx/etc/ssl/cert.pem:/etc/ssl/cert.pem
       - ./nginx/etc/ssl/key.pem:/etc/ssl/key.pem
+      - ./nginx/etc/ssl/cloudflare.crt:/etc/ssl/cloudflare.crt
     networks:
       - test_net
     depends_on:
